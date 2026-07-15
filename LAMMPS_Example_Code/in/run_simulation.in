@@ -45,7 +45,7 @@ variable        Tlo equal ${lv2}
 
 units           real  #metal  real
 dimension       3
-boundary        ff  ff  ff #  p p p  ff  ff  ff
+boundary        p p p #  p p p  ff  ff  ff
 atom_style      full
 read_data       ../Datafile/${datafilename}.data   
 
@@ -68,7 +68,7 @@ run 0
 
 ###=========================================
 
-fix wall all wall/reflect xlo EDGE xhi EDGE  ylo EDGE yhi EDGE  zlo EDGE zhi EDGE
+#fix wall all wall/reflect xlo EDGE xhi EDGE  ylo EDGE yhi EDGE  zlo EDGE zhi EDGE
 
 thermo       1000
 thermo_style custom step temp pe etotal ke epair ebond eangle  edihed  eimp  vol
